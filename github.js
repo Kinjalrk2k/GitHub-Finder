@@ -1,6 +1,8 @@
 class GitHub {
   constructor() {
-    
+    this.client_id = "";
+    this.client_secret = "";
+    this.PAT = "";
     this.repos_count = 6;
     this.repos_sort = "created: asc";
   }

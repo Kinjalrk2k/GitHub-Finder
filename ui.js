@@ -94,7 +94,7 @@ class UI {
 
     repos.forEach((repo) => {
       output += `
-      <div class="Box col-5 m-3">
+      <div class="Box col-9 col-md-5 m-3">
         <div class="Box-header">
           <h3 class="Box-title">
           <a href="${repo.html_url}">${repo.name}</a>
