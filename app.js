@@ -10,6 +10,7 @@ const searchBtn = document.getElementById("searchBtn");
 
 // search input's event listenser
 searchBtn.addEventListener("click", (e) => {
+  ui.showSpinner();
   ui.clearAutocomplete();
   // get input text
   // const userText = e.target.value;
@@ -21,6 +22,7 @@ searchBtn.addEventListener("click", (e) => {
 
     // make http call
     github.getUser(userText).then((data) => {
+      ui.removeSpinner();
       if (data.profile.message === "Not Found") {
         // show alert
         ui.showAlert("User not found!", "flash mt-3 flash-error");

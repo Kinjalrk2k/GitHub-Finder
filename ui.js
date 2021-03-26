@@ -2,6 +2,17 @@ class UI {
   constructor() {
     this.profile = document.getElementById("profile");
     this.reposSection = document.getElementById("repos");
+    this.loading = document.getElementById("loading");
+  }
+
+  showSpinner() {
+    this.loading.innerHTML = `
+      <h2><span>Loading</span><span class="AnimatedEllipsis"></span></h2>
+    `;
+  }
+
+  removeSpinner() {
+    this.loading.innerHTML = "";
   }
 
   showProfile(user) {
